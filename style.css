@@ -1,0 +1,350 @@
+/* General Body & Typography */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+h1 { font-size: 2.8em; }
+h2 { font-size: 2.2em; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; }
+h3 { font-size: 1.6em; }
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Layout Container */
+.container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Header/Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('header-background.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    color: #fff;
+    margin-top: 10px;
+    font-size: 3.5em;
+}
+
+.tagline {
+    font-size: 1.3em;
+    opacity: 0.9;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #34495e;
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: #ecf0f1;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 0;
+    position: relative;
+}
+
+.navbar a:hover {
+    color: #a2d2ff;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #a2d2ff;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+    left: 0;
+    background: #a2d2ff;
+}
+
+
+/* Section Cards */
+.section-card {
+    background-color: #ffffff;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: relative; /* For image positioning */
+    overflow: hidden; /* To contain floated images */
+}
+
+.section-image {
+    float: right; /* Float image to the right */
+    width: 300px; /* Adjust as needed */
+    height: auto;
+    margin-left: 30px; /* Space between text and image */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+/* Clearfix for floated images */
+.section-card::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Experience Section */
+.job-entry {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.job-entry:last-child {
+    border-bottom: none;
+}
+
+.job-entry h3 {
+    margin-bottom: 5px;
+    color: #34495e;
+}
+
+.job-entry .company {
+    font-weight: normal;
+    color: #7f8c8d;
+    margin-left: 10px;
+}
+
+.job-entry .dates {
+    font-style: italic;
+    color: #95a5a6;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.job-entry ul {
+    list-style: disc;
+    margin-left: 20px;
+    color: #555;
+}
+
+/* Portfolio Section */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.portfolio-item {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.portfolio-item h3 {
+    margin-top: 0;
+    color: #34495e;
+}
+
+.portfolio-item p {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.portfolio-item a {
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.portfolio-item a .arrow {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item a:hover .arrow {
+    transform: translateX(5px);
+}
+
+.portfolio-thumbnail {
+    width: 100%; /* Make thumbnail fill its container */
+    height: 180px; /* Fixed height for consistency */
+    object-fit: cover; /* Crop image to fit */
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Skills Section */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.skills-list h3 {
+    width: 100%;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    font-size: 1.4em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.skills-list ul {
+    flex: 1; /* Allow skill columns to grow */
+    min-width: 250px; /* Minimum width before wrapping */
+}
+
+.skills-list li {
+    background-color: #e8f0f7;
+    padding: 8px 15px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 0.95em;
+    color: #4a69bd;
+    transition: background-color 0.2s ease;
+}
+
+.skills-list li:hover {
+    background-color: #d1e0ed;
+}
+
+.skills-list li::before {
+    content: '✔';
+    color: #28a745;
+    margin-right: 10px;
+}
+
+
+/* Contact Section */
+.contact-details p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 15px;
+    }
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    .tagline {
+        font-size: 1.1em;
+    }
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .navbar li {
+        margin: 0;
+    }
+    .container {
+        margin: 15px auto;
+        padding: 0 15px;
+    }
+    .section-card {
+        padding: 30px;
+    }
+    .section-image {
+        float: none; /* Remove float on smaller screens */
+        margin: 0 auto 20px auto; /* Center image */
+        display: block;
+        width: 80%; /* Adjust width for better fit */
+    }
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Stack portfolio items */
+    }
+    .skills-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
